@@ -1,0 +1,100 @@
+<!-- <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+    if (isset($_SESSION['estado'])) {
+        header("location: index.php");
+    }
+}
+
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="documentos/css/bootstrap.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <title>Login</title>
+    <style>
+        @font-face {
+            font-family: "HelloJucky";
+            src: url('documentos/HELLOJUCKY.otf');
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background: rgb(255,255,255);
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 0%, rgba(209,209,209,1) 100%);
+
+        }
+
+        .logo {
+            font-family: "HelloJucky";
+            font-size: 50px;
+            text-align: center;
+            color: yellow;
+            -webkit-text-stroke: 1px black;
+            margin-bottom: 2vh;
+        }
+
+        form {
+            margin-top: 5vh;
+        }
+
+        @media screen and (max-width:699px) {
+            form {
+                width: 90vw;
+            }
+
+            .logo {
+                width: 90vw;
+            }
+
+            .crearcuenta {
+                width: 98vw;
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            form {
+                width: 500px;
+            }
+
+            .logo {
+                width: 500px;
+            }
+
+            .crearcuenta {
+                width: 500px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="documentos/php/login.php" method="POST">
+        <div class="logo">UNITED MARKET</div>
+        <br>
+        <label><b>Correo</b></label>
+        <input type="email" name="correo" class="form-control" placeholder="Correo">
+        <br>
+        <label><b>Contraseña</b></label>
+        <input type="password" name="contrasena" class="form-control" placeholder="*****" minlength="6">
+        <br>
+        <label class="crearcuenta">Al iniciar sesion, aceptas las Condiciones de uso y el Aviso de privacidad de United Markets</label>
+        <br>
+        <input type="submit" class="btn btn-warning btn-block" value="INICIAR SESION" style="color: black; font-weight: bold;">
+        <br>
+        <label class="crearcuenta">¿No tienes cuenta? Crea una</label>
+        <a href="registrar.html" class="btn btn-secondary btn-block">Crear Cuenta</a>
+    </form>
+</body>
+
+</html>
